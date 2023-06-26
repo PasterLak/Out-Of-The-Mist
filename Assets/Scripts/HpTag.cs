@@ -29,26 +29,17 @@ namespace DefaultNamespace
 
         private void Awake()
         {
-   
-            
             player = this.transform;
-             GameObject prefab = Resources.Load<GameObject>("tagHp");
-                        Transform canvas = GameObject.Find("Canvas").transform;
-                        GameObject tag = Instantiate(prefab,canvas);
-            
-                        rectTransform = tag.GetComponent<RectTransform>();
-                        uiObject = tag.transform;
-            
-                        textHp = tag.GetComponent<TMP_Text>();
-                        startPos = rectTransform.position;
-                        uiObject.gameObject.SetActive(false);
-        }
+            GameObject prefab = Resources.Load<GameObject>("tagHp");
+            Transform canvas = GameObject.Find("Canvas").transform;
+            GameObject tag = Instantiate(prefab, canvas);
 
-        private void Start()
-        {
-           
+            rectTransform = tag.GetComponent<RectTransform>();
+            uiObject = tag.transform;
 
-
+            textHp = tag.GetComponent<TMP_Text>();
+            startPos = rectTransform.position;
+            uiObject.gameObject.SetActive(false);
         }
 
         public void Kill()
@@ -68,8 +59,6 @@ namespace DefaultNamespace
           
         }
 
-
-       
         private void Update()
         {
             _time--;
@@ -124,8 +113,7 @@ namespace DefaultNamespace
                 if (state)
                     state = false;
             }
-
-            //UpdateUI();
+            
         }
 
         public void UpdateUI(int hp, int maxHp)

@@ -33,7 +33,5 @@ public class RocketsUI : Singleton<RocketsUI>
     public void UpdateUI()
     {
         text.text = RocketsCount.ToString();
-        
-        
     }
 }

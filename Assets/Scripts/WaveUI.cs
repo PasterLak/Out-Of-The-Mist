@@ -45,7 +45,8 @@ namespace DefaultNamespace
             InfoText.text = "Enemies: " + current + "/" + max;
         }
         
-        public static string ConvertTimeToMMSS(float timeInSeconds) {
+        public static string ConvertTimeToMMSS(float timeInSeconds) 
+        {
             int timeInt = (int)Mathf.Round(timeInSeconds);
 
             int min = timeInt / 60;

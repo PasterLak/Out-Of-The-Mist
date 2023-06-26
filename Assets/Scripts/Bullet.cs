@@ -16,6 +16,7 @@ public class Bullet : MonoBehaviour
     private RaycastHit hit;
     public Rigidbody rb;
     private Transform spawnPoint;
+    private Ray ray;
 
     private bool started = false;
     
@@ -28,7 +29,8 @@ public class Bullet : MonoBehaviour
     public void AddForce(Transform s)
     {
         spawnPoint = s;
-        Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height/2, 0));
+        
+        ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height/2, 0));
         transform.LookAt(ray.GetPoint(50));
         started = true;
         
@@ -38,27 +40,28 @@ public class Bullet : MonoBehaviour
     private void FixedUpdate()
     {
         if(!started) return;
-        //rb.velocity = transform.TransformDirection(new Vector3(speed, 0.0f, 0.0f));
-        //rb.AddRelativeForce(Vector3.forward * speed);
-       // transform.Translate(0,0 , 1);
-        //rb.velocity = spawnPoint.forward * speed;
-        //rb.AddRelativeForce(Vector3.forward * speed, ForceMode.Acceleration);
 
     }
 
     public void OnCollisionEnter(Collision collision)
     {
-        if(collision.transform.tag == "Player")
-            return;
-        if (collision.transform.tag == "Enemy")
+        switch (collision.transform.tag)
         {
-            if (collision.transform.TryGetComponent<Enemy>(out Enemy e))
+            case "Player":
+                return;
+            case "Enemy":
             {
-                int pr = Player.Instance.Stats.Damage / 4;
-                e.SetDamage(Player.Instance.Stats.Damage + Random.Range(-pr,pr));
+                if (collision.transform.TryGetComponent<Enemy>(out Enemy e))
+                {
+                    int pr = Player.Instance.Stats.Damage / 4;
+                    e.SetDamage(Player.Instance.Stats.Damage + Random.Range(-pr,pr));
                
+                }
+
+                break;
             }
         }
+
         DestroyIt();
     }
 
@@ -88,7 +91,7 @@ public class Bullet : MonoBehaviour
         }
         GameObject ga = Instantiate(Resources.Load<GameObject>("explosion"),transform.position,
             Quaternion.identity);
-        //gameObject.SetActive(false);
+       
         Destroy(this.gameObject);
     }
 }

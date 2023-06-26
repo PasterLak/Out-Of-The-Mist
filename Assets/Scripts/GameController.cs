@@ -32,8 +32,7 @@ public class GameController : MonoBehaviour
        
         Cursor.lockState = CursorLockMode.Locked;
     }
-
-    // Update is called once per frame
+    
     private void Update()
     {
     if(!active) return;

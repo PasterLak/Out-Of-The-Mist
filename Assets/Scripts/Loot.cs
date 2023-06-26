@@ -16,12 +16,7 @@ public class Loot : MonoBehaviour
     {
         
     }
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         if(!destroable) return;
