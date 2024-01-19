@@ -11,15 +11,21 @@ public class Mine : MonoBehaviour
    
    public void OnTriggerEnter(Collider other)
    {
-      if (other.tag == "Enemy")
+      if (other.tag is "Enemy" or "Bullet")
       {
          GameObject ga = Instantiate(Resources.Load<GameObject>("MineSound"));
          ga.transform.position = transform.position;
 
          int dm = damageBonus * Random.Range(damage, (int)(damage + damage * 0.2f));
-         Enemy en = other.GetComponent<Enemy>();
          
-         en.SetDamage(dm);
+         Enemy en = null;
+         
+         if(other.tag == "Enemy")
+         {
+            en = other.GetComponent<Enemy>();
+            en.SetDamage(dm);
+         }
+        
          
          Collider[] c = Physics.OverlapSphere(transform.position, radius);
          if (c != null && c.Length > 0)
@@ -37,5 +43,6 @@ public class Mine : MonoBehaviour
          
          Destroy(this.gameObject);
       }
+
    }
 }

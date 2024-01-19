@@ -162,6 +162,8 @@ public class SkillsWindow : MonoBehaviour
                 break;
             case Skill.Exp:
                 Enemy.ExpLevel++;
+                Player.Instance.maxExp -= (Player.Instance.maxExp / 20);
+                Player.Instance.AddExp(1);
                 break;
             case Skill.Heal:
                 Player.Instance.AddHealSpeed();

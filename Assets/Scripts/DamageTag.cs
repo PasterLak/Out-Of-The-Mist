@@ -25,26 +25,17 @@ namespace DefaultNamespace
 
         private void Awake()
         {
-   
-            
             player = this.transform;
-             GameObject prefab = Resources.Load<GameObject>("tag");
-                        Transform canvas = GameObject.Find("Canvas").transform;
-                        GameObject tag = Instantiate(prefab,canvas);
-            
-                        rectTransform = tag.GetComponent<RectTransform>();
-                        uiObject = tag.transform;
-            
-                        textHp = tag.GetComponent<TMP_Text>();
-                        startPos = rectTransform.position;
-                        uiObject.gameObject.SetActive(false);
-        }
+            GameObject prefab = Resources.Load<GameObject>("tag");
+            Transform canvas = GameObject.Find("Canvas").transform;
+            GameObject tag = Instantiate(prefab, canvas);
 
-        private void Start()
-        {
-           
+            rectTransform = tag.GetComponent<RectTransform>();
+            uiObject = tag.transform;
 
-
+            textHp = tag.GetComponent<TMP_Text>();
+            startPos = rectTransform.position;
+            uiObject.gameObject.SetActive(false);
         }
 
         public void Kill()
@@ -52,23 +43,19 @@ namespace DefaultNamespace
             textHp.text = "";
             Destroy(uiObject.gameObject);
             //StartCoroutine(uiObject.GetComponent<Destroy>().Kill());
-            
         }
 
         public void ShowDamage(int damage)
         {
             rectTransform.position = startPos;
-            textHp.text = "-"+damage;
+            textHp.text = "-" + damage;
             uiObject.gameObject.SetActive(true);
             _timeShow = 1;
-          
         }
 
 
-       
         private void Update()
         {
-            
             _time--;
             if (_time > 0) return;
             _time = timeToUpdate;
@@ -81,32 +68,29 @@ namespace DefaultNamespace
                 {
                     _timeShow = 0;
                     uiObject.gameObject.SetActive(false);
-                    
                 }
-                    
-                rectTransform.position = new Vector3(rectTransform.position.x, 
+
+                rectTransform.position = new Vector3(rectTransform.position.x,
                     rectTransform.position.y + 5f * Time.deltaTime,
                     rectTransform.position.z);
             }
             else
             {
-                
             }
 
             Vector3 pos = player.position + Vector3.up * 3;
 
             if (Helper.PointInCameraView(pos))
             {
-                if(_timeShow > 0)
+                if (_timeShow > 0)
                     uiObject.gameObject.SetActive(true);
-                
+
                 rectTransform.position = Camera.main.WorldToScreenPoint(pos);
                 if (!state)
                     state = true;
             }
             else
             {
-                
                 uiObject.gameObject.SetActive(false);
                 if (state)
                     state = false;
@@ -117,9 +101,6 @@ namespace DefaultNamespace
 
         private void UpdateUI()
         {
-           
-       
-
             //textTag.text = "11";
         }
     }

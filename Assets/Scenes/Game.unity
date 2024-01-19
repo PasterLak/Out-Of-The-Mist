@@ -3927,15 +3927,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2012042591282397570, guid: ec3e4dad8eb674971a682c158fc761bf,
+    - target: {fileID: 2873217160565827781, guid: ec3e4dad8eb674971a682c158fc761bf,
         type: 3}
       propertyPath: count
       value: 2500
       objectReference: {fileID: 0}
-    - target: {fileID: 2012042591282397570, guid: ec3e4dad8eb674971a682c158fc761bf,
+    - target: {fileID: 2873217160565827781, guid: ec3e4dad8eb674971a682c158fc761bf,
         type: 3}
-      propertyPath: destroable
-      value: 0
+      propertyPath: timeToDestroy
+      value: 9999
       objectReference: {fileID: 0}
     - target: {fileID: 7059478843991286222, guid: ec3e4dad8eb674971a682c158fc761bf,
         type: 3}
@@ -3995,6 +3995,12 @@ Transform:
   - {fileID: 588620385}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &195964105 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1632418687240483684, guid: f6b6d731893ce46f5865ac7dfeb588c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 869409329}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &204098923
 GameObject:
   m_ObjectHideFlags: 0
@@ -4165,15 +4171,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2012042591282397570, guid: ec3e4dad8eb674971a682c158fc761bf,
+    - target: {fileID: 2873217160565827781, guid: ec3e4dad8eb674971a682c158fc761bf,
         type: 3}
       propertyPath: count
       value: 2500
       objectReference: {fileID: 0}
-    - target: {fileID: 2012042591282397570, guid: ec3e4dad8eb674971a682c158fc761bf,
+    - target: {fileID: 2873217160565827781, guid: ec3e4dad8eb674971a682c158fc761bf,
         type: 3}
-      propertyPath: destroable
-      value: 0
+      propertyPath: timeToDestroy
+      value: 9999
       objectReference: {fileID: 0}
     - target: {fileID: 7059478843991286222, guid: ec3e4dad8eb674971a682c158fc761bf,
         type: 3}
@@ -4338,6 +4344,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LootAmmo2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198733811390689612, guid: f6b6d731893ce46f5865ac7dfeb588c1,
+        type: 3}
+      propertyPath: timeToDestroy
+      value: 5000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4769,6 +4780,11 @@ PrefabInstance:
         type: 3}
       propertyPath: destroable
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5027684196545439585, guid: 61a28c38d73a344b29db454d7e465a58,
+        type: 3}
+      propertyPath: timeToDestroy
+      value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 7059478843991286222, guid: 61a28c38d73a344b29db454d7e465a58,
         type: 3}
@@ -7613,6 +7629,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LootAmmo2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8198733811390689612, guid: f6b6d731893ce46f5865ac7dfeb588c1,
+        type: 3}
+      propertyPath: timeToDestroy
+      value: 5000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8111,6 +8132,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8066825066970788253, guid: 5faa0fb1e973f4636a4a4acda432c980,
+        type: 3}
+      propertyPath: timeToDestroy
+      value: 5000
+      objectReference: {fileID: 0}
     - target: {fileID: 1715941352498822143, guid: 5faa0fb1e973f4636a4a4acda432c980,
         type: 3}
       propertyPath: m_Name
@@ -8169,11 +8195,6 @@ PrefabInstance:
     - target: {fileID: 6958049532089837909, guid: 5faa0fb1e973f4636a4a4acda432c980,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7909525018776443827, guid: 5faa0fb1e973f4636a4a4acda432c980,
-        type: 3}
-      propertyPath: destroable
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -9595,20 +9616,15 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1507596407}
     m_Modifications:
+    - target: {fileID: 186057379833073232, guid: c4f500ce0a25d43509ce9d36f7b07dfa,
+        type: 3}
+      propertyPath: timeToDestroy
+      value: 5000
+      objectReference: {fileID: 0}
     - target: {fileID: 4179533559713087466, guid: c4f500ce0a25d43509ce9d36f7b07dfa,
         type: 3}
       propertyPath: m_Name
       value: LootHp2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4617552086582812582, guid: c4f500ce0a25d43509ce9d36f7b07dfa,
-        type: 3}
-      propertyPath: count
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 4617552086582812582, guid: c4f500ce0a25d43509ce9d36f7b07dfa,
-        type: 3}
-      propertyPath: destroable
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5575286044629429568, guid: c4f500ce0a25d43509ce9d36f7b07dfa,
         type: 3}
@@ -12666,6 +12682,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8066825066970788253, guid: 5faa0fb1e973f4636a4a4acda432c980,
+        type: 3}
+      propertyPath: timeToDestroy
+      value: 5000
+      objectReference: {fileID: 0}
     - target: {fileID: 1715941352498822143, guid: 5faa0fb1e973f4636a4a4acda432c980,
         type: 3}
       propertyPath: m_Name
@@ -12726,11 +12747,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7909525018776443827, guid: 5faa0fb1e973f4636a4a4acda432c980,
-        type: 3}
-      propertyPath: destroable
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12744,20 +12760,15 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7114053362483267647, guid: 1ac3c3f281fb64a80a7cf9d20a91f09b,
+        type: 3}
+      propertyPath: timeToDestroy
+      value: 5000
+      objectReference: {fileID: 0}
     - target: {fileID: 4179533559713087466, guid: 1ac3c3f281fb64a80a7cf9d20a91f09b,
         type: 3}
       propertyPath: m_Name
       value: LootHp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4617552086582812582, guid: 1ac3c3f281fb64a80a7cf9d20a91f09b,
-        type: 3}
-      propertyPath: destroable
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4617552086582812582, guid: 1ac3c3f281fb64a80a7cf9d20a91f09b,
-        type: 3}
-      propertyPath: timeToDestroy
-      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 5575286044629429568, guid: 1ac3c3f281fb64a80a7cf9d20a91f09b,
         type: 3}
@@ -13337,6 +13348,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LootAmmo2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198733811390689612, guid: f6b6d731893ce46f5865ac7dfeb588c1,
+        type: 3}
+      propertyPath: count
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198733811390689612, guid: f6b6d731893ce46f5865ac7dfeb588c1,
+        type: 3}
+      propertyPath: timeToDestroy
+      value: 5000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14282,6 +14303,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LootAmmo2
       objectReference: {fileID: 0}
+    - target: {fileID: 8198733811390689612, guid: f6b6d731893ce46f5865ac7dfeb588c1,
+        type: 3}
+      propertyPath: timeToDestroy
+      value: 5000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14388,6 +14414,99 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 863834251}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &869409329
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1507596407}
+    m_Modifications:
+    - target: {fileID: 1632418687240483684, guid: f6b6d731893ce46f5865ac7dfeb588c1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632418687240483684, guid: f6b6d731893ce46f5865ac7dfeb588c1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.4589996
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632418687240483684, guid: f6b6d731893ce46f5865ac7dfeb588c1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.9074488
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632418687240483684, guid: f6b6d731893ce46f5865ac7dfeb588c1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -29.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632418687240483684, guid: f6b6d731893ce46f5865ac7dfeb588c1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632418687240483684, guid: f6b6d731893ce46f5865ac7dfeb588c1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632418687240483684, guid: f6b6d731893ce46f5865ac7dfeb588c1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632418687240483684, guid: f6b6d731893ce46f5865ac7dfeb588c1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632418687240483684, guid: f6b6d731893ce46f5865ac7dfeb588c1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632418687240483684, guid: f6b6d731893ce46f5865ac7dfeb588c1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632418687240483684, guid: f6b6d731893ce46f5865ac7dfeb588c1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2012042591282397570, guid: f6b6d731893ce46f5865ac7dfeb588c1,
+        type: 3}
+      propertyPath: count
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2012042591282397570, guid: f6b6d731893ce46f5865ac7dfeb588c1,
+        type: 3}
+      propertyPath: destroable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7059478843991286222, guid: f6b6d731893ce46f5865ac7dfeb588c1,
+        type: 3}
+      propertyPath: m_Name
+      value: LootAmmo2 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198733811390689612, guid: f6b6d731893ce46f5865ac7dfeb588c1,
+        type: 3}
+      propertyPath: count
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198733811390689612, guid: f6b6d731893ce46f5865ac7dfeb588c1,
+        type: 3}
+      propertyPath: timeToDestroy
+      value: 5000
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f6b6d731893ce46f5865ac7dfeb588c1, type: 3}
 --- !u!1 &874605735
 GameObject:
   m_ObjectHideFlags: 0
@@ -19994,6 +20113,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LootAmmo2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8198733811390689612, guid: f6b6d731893ce46f5865ac7dfeb588c1,
+        type: 3}
+      propertyPath: timeToDestroy
+      value: 5000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21212,6 +21336,11 @@ PrefabInstance:
         type: 3}
       propertyPath: destroable
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6571357811939831945, guid: bbe1ba41041a04de4b340b805aee8f17,
+        type: 3}
+      propertyPath: timeToDestroy
+      value: 5000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22625,6 +22754,7 @@ Transform:
   - {fileID: 273467255}
   - {fileID: 170206355}
   - {fileID: 782201732}
+  - {fileID: 195964105}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1508495375
@@ -25530,6 +25660,11 @@ PrefabInstance:
         type: 3}
       propertyPath: destroable
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5027684196545439585, guid: 61a28c38d73a344b29db454d7e465a58,
+        type: 3}
+      propertyPath: timeToDestroy
+      value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 7059478843991286222, guid: 61a28c38d73a344b29db454d7e465a58,
         type: 3}
@@ -31745,6 +31880,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LootAmmo2
       objectReference: {fileID: 0}
+    - target: {fileID: 8198733811390689612, guid: f6b6d731893ce46f5865ac7dfeb588c1,
+        type: 3}
+      propertyPath: timeToDestroy
+      value: 5000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -32803,15 +32943,15 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 404444410506647616, guid: 96dd63305b6c24c13b4bfc7dd920c52e,
+        type: 3}
+      propertyPath: timeToDestroy
+      value: 5000
+      objectReference: {fileID: 0}
     - target: {fileID: 4179533559713087466, guid: 96dd63305b6c24c13b4bfc7dd920c52e,
         type: 3}
       propertyPath: m_Name
       value: LootRocket (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4617552086582812582, guid: 96dd63305b6c24c13b4bfc7dd920c52e,
-        type: 3}
-      propertyPath: destroable
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5575286044629429568, guid: 96dd63305b6c24c13b4bfc7dd920c52e,
         type: 3}
@@ -34536,6 +34676,11 @@ PrefabInstance:
         type: 3}
       propertyPath: destroable
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6571357811939831945, guid: bbe1ba41041a04de4b340b805aee8f17,
+        type: 3}
+      propertyPath: timeToDestroy
+      value: 5000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

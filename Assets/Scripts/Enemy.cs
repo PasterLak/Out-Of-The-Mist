@@ -129,7 +129,7 @@ public class Enemy : MonoBehaviour, IHasStats
             {
                 GameObject ga = Instantiate(Resources.Load<GameObject>("LootAmmo"),
                     transform.position, Quaternion.identity);
-                ga.GetComponent<Loot>().count += 3*DropLevel;
+                ga.GetComponent<LootBase>().Count += 3*DropLevel;
             }
         }
         if (x > 14 && x <= 16)
